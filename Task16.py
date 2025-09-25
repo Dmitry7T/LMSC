@@ -1,4 +1,6 @@
 #Быстров Артём
+from Utils import clear
+
 def str_simple():
     operation = input("Введите строку с операцией: ")
     if operation == "+":
@@ -71,18 +73,30 @@ def menu_strings():
               "2. Строки по центру экрана\n"
               "3. Количество слов и уникальных слов\n"
               "4. Статистика по символам строки\n"
-              "5. Выход\n")
+              "0. Выход в меню\n")
+        clear()
         match num:
+            case "0":
+                return
             case "5":
                 return
             case "1":
                 print(str_simple_ops())
+                input()
+                clear()
             case "2":
                 print(str_showcenter_op())
+                input()
+                clear()
             case "3":
                 print(*str_words_op())
+                input()
+                clear()
             case "4":
                 print(str_stat_op())
+                input()
+                clear()
+
 
 def str_simple_ops():
     return str_simple()

@@ -4,8 +4,7 @@ import sys
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding = 'utf-8')
 
-import keyboard
-import os
+from Utils import clear
     
 class Menu():
     def number_ops(self): #11
@@ -15,11 +14,12 @@ class Menu():
         from Task16 import menu_strings
         return menu_strings()
     
-    def long_ops(): # 20
+    def long_ops(self): # 20
+        clear()
         return
     
     def team(self): 
-        team = ['Ilya', 'zzqqat', 'Sranko0', 'rdrygs999', 'tdimon7', 'Kayaru_376', 'why6not9', 'IvanGusev123']
+        team = [' Ilya\n', 'zzqqat\n', 'Sranko0\n', 'rdrygs999\n', 'tdimon7\n', 'Kayaru_376\n', 'why6not9\n', 'IvanGusev123']
         print(*team[::], flush= True)
         return
     
@@ -37,12 +37,6 @@ class Menu():
         print('_' * 22, flush= True)
         return
         
-    def clear(self):
-        if sys.platform.startswith('win'):
-            os.system('cls')
-        else:
-            os.system('clear')
-
 
 
 def main():
@@ -55,25 +49,26 @@ def main():
     while(1):
         key = input()
         if key == "esc":
+            clear()
             break
         
         match key:
             case "0":
-                menu.clear()
+                clear()
                 menu.output()
             case "1":
-                menu.clear()
+                clear()
                 menu.number_ops()
             case "2":
-                menu.clear()
+                clear()
                 menu.string_ops()
-                menu.clear()
+                clear()
                 menu.output()
             case "3":
-                menu.clear()
+                clear()
                 menu.long_ops()
             case "4":
-                menu.clear()
+                clear()
                 menu.team()
         
 if __name__ == "__main__":
