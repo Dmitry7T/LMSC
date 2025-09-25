@@ -18,7 +18,7 @@ class Menu():
     def long_ops(): # 20
         return
     
-    def team(self): # 20
+    def team(self): 
         team = ['Ilya', 'zzqqat', 'Sranko0', 'rdrygs999', 'tdimon7', 'Kayaru_376', 'why6not9', 'IvanGusev123']
         print(*team[::], flush= True)
         return
@@ -34,7 +34,7 @@ class Menu():
         print("3. Длинная арифметика", flush= True)
         print("4. Команда разработчиков", flush= True)
 
-        print('_' * 20, flush= True)
+        print('_' * 22, flush= True)
         return
         
     def clear(self):
@@ -53,7 +53,7 @@ def main():
     menu.output()
     
     while(1):
-        key = keyboard.read_key()
+        key = input()
         if key == "esc":
             break
         
@@ -67,6 +67,8 @@ def main():
             case "2":
                 menu.clear()
                 menu.string_ops()
+                menu.clear()
+                menu.output()
             case "3":
                 menu.clear()
                 menu.long_ops()
