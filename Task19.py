@@ -26,6 +26,6 @@ def long_multiply():
         arr[i + j] += c
     while len(arr) > 1 and arr[0] == 0:
         arr = arr[1:]
-
-    return "Результат умножения: ", ''.join(map(str, arr))
+    res = ''.join(map(str, arr))
+    return f"Результат умножения: {res}"
 long_multiply()
