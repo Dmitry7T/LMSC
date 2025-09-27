@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['main.py'],
+    ['Task21.py'],
     pathex=[],
     binaries=[],
     datas=[],
