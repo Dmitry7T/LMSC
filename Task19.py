@@ -28,4 +28,3 @@ def long_multiply():
         arr = arr[1:]
     res = ''.join(map(str, arr))
     return f"Результат умножения: {res}"
-long_multiply()

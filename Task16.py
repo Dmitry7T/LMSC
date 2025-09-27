@@ -34,7 +34,8 @@ def str_words():
     l1 = len(h)
     h = set(h)
     l2 = len(h)
-    return l1, l2    
+    print(f"Количество слов в строке: {l1}\nКоличество уникальных слов: {l2}")
+    return ""
 
 def str_stat():
    
@@ -65,6 +66,7 @@ def str_stat():
     print(f"Количество символов в верхнем регистре: {upper}")
     print(f"Количество символов в нижнем регистре: {lower}")
     print(f"Количество пробельных символов: {whitespace}")
+    return ""
 
 def menu_strings():
     while True:
@@ -96,7 +98,6 @@ def menu_strings():
                 print(str_stat_op())
                 input()
                 clear()
-
 
 def str_simple_ops():
     return str_simple()
